@@ -1,0 +1,5 @@
+<div class="row">
+  <% pieces.each_with_index do |piece, i| %>
+    <div class="square <%= (black_first + i).even? ? nil : "dark_square" %>"><%= piece.html_safe %></div>
+  <% end %>
+</div>

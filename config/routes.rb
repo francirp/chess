@@ -1,4 +1,7 @@
 Chess::Application.routes.draw do
+  root to: 'Pages#board'
+  get "pages/board"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

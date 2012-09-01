@@ -12,4 +12,21 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui
 //= require_tree .
+
+$(document).ready(function() {
+  $(".square").draggable({
+    containment: "#board",
+    revert: true,
+    helper: 'clone',
+    opacity: 0.7,
+    revertDuration: 0
+  });
+  $(".square").droppable({
+    drop: function(event, ui) {
+      $(this).html(ui.draggable.html());
+      $(ui.draggable).html("");
+    }
+  });
+});
