@@ -12,6 +12,11 @@
  *= require_self
  *= require_tree .
  */
+
+body {
+  background-image: url('/assets/grey.png');
+}
+
 #board {
   border: thick solid #1D7373;
   height: 576px;
@@ -41,5 +46,4 @@
   background: -ms-linear-gradient(-45deg,  #009999 0%,#1d7373 100%); /* IE10+ */
   background: linear-gradient(135deg,  #009999 0%,#1d7373 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009999', endColorstr='#1d7373',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
 }
