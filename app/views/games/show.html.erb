@@ -1,0 +1,24 @@
+<% black_pieces = %w(&#9820; &#9822; &#9821; &#9819; &#9818; &#9821; &#9822; &#9820;) %>
+<% black_pawns = Array.new(8, "&#9823;") %>
+
+<% white_pieces = %w(&#9814; &#9816; &#9815; &#9813; &#9812; &#9815; &#9816; &#9814;) %>
+<% white_pawns = Array.new(8, "&#9817;") %>
+
+<% empty_rank = Array.new(8, "&nbsp;") %>
+
+<% ranks = [white_pieces, white_pawns, empty_rank, empty_rank, empty_rank, empty_rank, black_pawns, black_pieces] %>
+
+<div id="board" data-game_id="<%= @game.id %>">
+  <% 8.downto(1) do |i| %>
+    <%= render 'rank', number: i, pieces: ranks[i - 1] %>
+  <% end %>
+</div>
+
+<script>
+  $(document).ready(function() {
+    <% @moves.each do |move| %>
+      $("#<%= move.to %>").html($("#<%= move.from %>").html());
+      $("#<%= move.from %>").html("");
+    <% end  %>
+  });
+</script>

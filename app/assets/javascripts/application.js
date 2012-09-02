@@ -16,17 +16,33 @@
 //= require_tree .
 
 $(document).ready(function() {
-  $(".square").draggable({
-    containment: "#board",
+  $('.square').draggable({
+    containment: '#board',
     revert: true,
     helper: 'clone',
     opacity: 0.7,
     revertDuration: 0
   });
-  $(".square").droppable({
+  $('.square').droppable({
     drop: function(event, ui) {
       $(this).html(ui.draggable.html());
-      $(ui.draggable).html("");
+      $(ui.draggable).html('');
+      $.ajax({
+        url: '/moves',
+        type: 'POST',
+        data: {
+            'move[game_id]': $('#board').attr('data-game_id'),
+            'move[from]': $(ui.draggable).attr('id'),
+            'move[to]': this.id
+        },
+        dataType: 'json'
+      });
     }
+  });
+  
+  $('.square').on('click', function() {
+    $.ajax({
+      url: 'http://localhost:3000/pages/board?square=' + this.id
+    });
   });
 });

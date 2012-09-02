@@ -9,18 +9,47 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require reset
- *= require_self
  *= require_tree .
+ *= require_self
  */
+ 
+h1 {
+  font-size: xx-large;
+  margin: 36px;
+  text-align: center;
+}
+
+a {
+  color: #1D7373;
+  text-decoration: none;
+}
+
+#game_list {
+  font-size: x-large;
+  margin: auto;
+  width: 720px;
+}
+
+.game_li {
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+#new_game_button {
+  border: thick #1D7373 solid;  
+  font-family: 'IM Fell DW Pica SC', serif;
+  font-size: x-large;
+}
 
 body {
   background-image: url('/assets/grey.png');
+  font-family: 'IM Fell DW Pica SC', serif;
 }
 
 #board {
   border: thick solid #1D7373;
   height: 576px;
-  margin: 72px auto;
+  margin: 36px auto;
   width: 576px;
 }
 .square {
@@ -33,7 +62,7 @@ body {
   width: 72px;
 }
 
-.row {
+.rank {
   clear: both;
 }
 

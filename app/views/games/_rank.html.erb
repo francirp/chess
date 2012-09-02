@@ -1,0 +1,7 @@
+<div class="rank_<%= number %>">
+  <% ('a'..'h').each_with_index do |file, i| %>
+    <div class="square file_<%= file %> <%= (number + i).even? ? nil : "dark_square" %>" id="<%= file %><%= number %>">
+      <%= pieces[i].html_safe %>
+    </div>
+  <% end %>
+</div>

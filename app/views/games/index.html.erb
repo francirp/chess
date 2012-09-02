@@ -1,0 +1,6 @@
+<ul id="game_list">
+  <li class="game_li"><%= button_to 'start a game', games_url, id: 'new_game_button' %></li>
+<% @games.each do |game| %>
+  <li class="game_li"><%= link_to "#{time_ago_in_words(game.created_at)} ago", game %> <%= link_to '&#215'.html_safe, game, method: :delete, data: { confirm: 'Delete this game?' } %></li>
+<% end %>
+</ul>
