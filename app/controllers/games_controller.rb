@@ -1,6 +1,4 @@
 class GamesController < ApplicationController
-  # GET /games
-  # GET /games.json
   def index
     @games = Game.order("created_at DESC").all
 
@@ -10,8 +8,6 @@ class GamesController < ApplicationController
     end
   end
 
-  # GET /games/1
-  # GET /games/1.json
   def show
     @game = Game.find(params[:id])
     @moves = @game.moves.order("created_at ASC")
@@ -36,8 +32,6 @@ class GamesController < ApplicationController
     end
   end
 
-  # DELETE /games/1
-  # DELETE /games/1.json
   def destroy
     @game = Game.find(params[:id])
     @game.destroy

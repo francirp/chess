@@ -1,6 +1,4 @@
 class MovesController < ApplicationController
-  # POST /moves
-  # POST /moves.json
   def create
     @move = Move.new(params[:move])
 
