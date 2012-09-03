@@ -27,6 +27,8 @@ $(document).ready(function() {
     drop: function(event, ui) {
       $(this).html(ui.draggable.html());
       $(ui.draggable).html('');
+      $(".last_move").removeClass('last_move');
+      $(this).addClass('last_move');
       $.ajax({
         url: '/moves',
         type: 'POST',

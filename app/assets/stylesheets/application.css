@@ -76,3 +76,7 @@ body {
   background: linear-gradient(135deg,  #009999 0%,#1d7373 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009999', endColorstr='#1d7373',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
+
+.last_move {
+  text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red, 1px 1px 2px #333;
+}
