@@ -16,9 +16,12 @@
 
 <script>
   $(document).ready(function() {
-    <% @moves.each do |move| %>
+    <% @moves.each_with_index do |move, i| %>
       $("#<%= move.to %>").html($("#<%= move.from %>").html());
       $("#<%= move.from %>").html("");
+      <% if i == (@moves.count - 1) %>
+        $("#<%= move.to %>").css('color', 'red');
+      <% end %>
     <% end  %>
   });
 </script>
