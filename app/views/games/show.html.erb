@@ -20,7 +20,7 @@
       $("#<%= move.to %>").html($("#<%= move.from %>").html());
       $("#<%= move.from %>").html("");
       <% if i == (@moves.count - 1) %>
-        $("#<%= move.to %>").css('color', 'red');
+        $("#<%= move.to %>").css('text-shadow', '-1px 0 red, 0 1px red, 1px 0 red, 0 -1px red, 1px 1px 2px #333');
       <% end %>
     <% end  %>
   });
