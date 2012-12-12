@@ -1,3 +1,15 @@
+<% content_for :head do %>
+  <meta http-equiv="refresh" content="10">
+<% end %>
+
+<h1>Game #<%= @game.id %></h1>
+<p>This is a <%= @game.public ? 'public' : 'private' %> game.</p>
+
+
+<nav>
+  <%= link_to 'Other Games...', games_url %>
+</nav>
+
 <% black_pieces = %w(&#9820; &#9822; &#9821; &#9819; &#9818; &#9821; &#9822; &#9820;) %>
 <% black_pawns = Array.new(8, "&#9823;") %>
 

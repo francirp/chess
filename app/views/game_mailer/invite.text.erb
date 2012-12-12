@@ -1,0 +1,15 @@
+Hello!
+
+You've been challenged to play a game of chess.
+
+Here's the link: <%= game_url(@game, :host => 'instachess.com') %>
+
+<% if @game.public? %>
+The game will be public, so the world will be watching!
+<% else %>
+It's a private game, so only you and your opponent know the link.
+<% end %>
+
+Good luck,
+The InstaChess Team
+

@@ -12,7 +12,25 @@
  *= require_tree .
  *= require_self
  */
- 
+
+.notice {
+  background: #fff959;
+  color: #000;
+  font-size: 24px;
+  text-align: center;
+  padding: 12px;
+}
+nav {
+  text-align: center;
+  margin-bottom: 36px;
+  font-size: 24px;
+}
+
+#new_game_form {
+  display: none;
+  margin: 24px;
+}
+
 h1 {
   font-size: xx-large;
   margin: 36px;
@@ -36,7 +54,7 @@ a {
 }
 
 #new_game_button {
-  border: thick #1D7373 solid;  
+  border: thick #1D7373 solid;
   font-family: 'IM Fell DW Pica SC', serif;
   font-size: x-large;
 }
@@ -53,7 +71,7 @@ body {
   width: 576px;
 }
 .square {
-  color: #FF9640;   
+  color: #FF9640;
   float: left;
   font-size: 400%;
   height: 72px;

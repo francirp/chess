@@ -1,0 +1,10 @@
+<div id="new_game_form">
+<%= form_for Game.new do |f| %>
+  <p><%= f.check_box :public %><%= f.label :public, "Let everyone watch this game" %></p>
+  <p>
+    <%= f.label :invite, "Invite an opponent (optional):" %>
+    <%= f.text_field :invite, placeholder: 'friend@gmail.com' %>
+  </p>
+  <%= f.submit 'Start!' %> or <%= link_to "Cancel", games_url, id: 'cancel_new_game' %>
+<% end %>
+</div>
