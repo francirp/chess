@@ -4,6 +4,7 @@ class MovesController < ApplicationController
 
     respond_to do |format|
       if @move.save
+        format.js
         format.json { render json: @move, status: :created, location: @move }
       else
         format.json { render json: @move.errors, status: :unprocessable_entity }

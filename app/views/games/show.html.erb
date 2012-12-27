@@ -1,6 +1,4 @@
-<% content_for :head do %>
-  <meta http-equiv="refresh" content="10">
-<% end %>
+<%= subscribe_to "/games/#{@game.id}" %>
 
 <h1>Game #<%= @game.id %></h1>
 <p>This is a <%= @game.public ? 'public' : 'private' %> game.</p>

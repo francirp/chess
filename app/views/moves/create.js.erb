@@ -1,0 +1,5 @@
+<% publish_to "/games/#{@move.game.id}" do %>
+  $("#<%= @move.to %>").html($("#<%= @move.from %>").html());
+  $("#<%= @move.from %>").html("");
+  $("#<%= @move.to %>").addClass('last_move');
+<% end %>

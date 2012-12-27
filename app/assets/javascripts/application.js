@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui
+//= require private_pub
 //= require_tree .
 
 $(document).ready(function() {
@@ -25,10 +26,10 @@ $(document).ready(function() {
   });
   $('.square').droppable({
     drop: function(event, ui) {
-      $(this).html(ui.draggable.html());
-      $(ui.draggable).html('');
-      $(".last_move").removeClass('last_move');
-      $(this).addClass('last_move');
+      // $(this).html(ui.draggable.html());
+      // $(ui.draggable).html('');
+      // $(".last_move").removeClass('last_move');
+      // $(this).addClass('last_move');
       $.ajax({
         url: '/moves',
         type: 'POST',
@@ -37,14 +38,8 @@ $(document).ready(function() {
             'move[from]': $(ui.draggable).attr('id'),
             'move[to]': this.id
         },
-        dataType: 'json'
+        dataType: 'script'
       });
     }
-  });
-  
-  $('.square').on('click', function() {
-    $.ajax({
-      url: 'http://localhost:3000/pages/board?square=' + this.id
-    });
   });
 });
