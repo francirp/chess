@@ -1,5 +1,5 @@
 class GameMailer < ActionMailer::Base
-  default from: "instachess@example.com"
+  default from: "team@nanochess.com"
 
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
