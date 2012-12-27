@@ -1,10 +1,10 @@
 development:
-  server: "http://localhost:9292/faye"
-  secret_token: "secret"
+  server: "http://nanochess-faye.herokuapp.com/faye"
+  secret_token: "9bbedadce67c062d7bebb3eccb2e3bf22babfaef29c5949d9dd57e934d8538ea"
 test:
   server: "http://localhost:9292/faye"
-  secret_token: "secret"
+  secret_token: "9bbedadce67c062d7bebb3eccb2e3bf22babfaef29c5949d9dd57e934d8538ea"
 production:
-  server: "http://example.com/faye"
-  secret_token: "dc21976372589d782dbca41c6821069eb8f6ce4dc2695ac645933e4cdebf4adf"
+  server: "http://nanochess-faye.herokuapp.com/faye"
+  secret_token: "9bbedadce67c062d7bebb3eccb2e3bf22babfaef29c5949d9dd57e934d8538ea"
   signature_expiration: 3600 # one hour
